@@ -66,8 +66,8 @@ const Pricing = () => {
   ]
 
   return (
-    <section className="dark bg-background px-6 py-10">
-      <div className="mx-auto max-w-6xl">
+    <section className="bg-background px-6 py-16 text-foreground sm:py-20">
+      <div className="mx-auto max-w-6xl px-0 sm:px-6">
         <div className="text-center mb-16">
 
           
@@ -77,13 +77,17 @@ const Pricing = () => {
               Monthly
             </span>
             <button
+              type="button"
+              aria-label={`Switch to ${isYearly ? "monthly" : "yearly"} billing`}
               onClick={() => setIsYearly(!isYearly)}
               className={`relative inline-flex h-8 w-14 items-center rounded-full transition-colors ${
-                isYearly ? 'bg-primary' : 'bg-muted'
+                isYearly ? 'border-primary bg-primary' : 'border-border bg-secondary'
               }`}
             >
               <span
-                className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
+                className={`inline-block h-6 w-6 transform rounded-full bg-primary transition-transform ${
+                  isYearly ? "bg-primary-foreground" : "bg-foreground"
+                } ${
                   isYearly ? 'translate-x-7' : 'translate-x-1'
                 }`}
               />
@@ -120,14 +124,14 @@ const Pricing = () => {
               )}
 
               <CardHeader className="text-center pb-4 sm:pb-2">
-                <CardTitle className="text-base sm:text-base  mb-2">{plan.name}</CardTitle>
+                <CardTitle className="mb-2 text-lg sm:text-base">{plan.name}</CardTitle>
                 <div className="mb-3 sm:mb-4">
                   <span className="text-3xl sm:text-4xl font-bold text-foreground">
                     {isYearly ? plan.priceYearly : plan.priceMonthly}
                   </span>
                   <span className="text-sm text-muted-foreground ml-1">{plan.period}</span>
                 </div>
-                <CardDescription className="text-xs sm:text-base">{plan.description}</CardDescription>
+                <CardDescription className="text-sm sm:text-base">{plan.description}</CardDescription>
               </CardHeader>
 
               <CardContent className="space-y-4 sm:space-y-6">
@@ -135,7 +139,7 @@ const Pricing = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start gap-2 sm:gap-3">
                       <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-xs sm:text-sm text-foreground">{feature}</span>
+                      <span className="text-sm text-foreground">{feature}</span>
                     </li>
                   ))}
                 </ul>

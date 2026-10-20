@@ -1,3 +1,8 @@
+"use client"
+
+import { useState, useEffect, useRef } from "react"
+import { useTheme } from "next-themes"
+
 const socialLinks = [
   { label: "Twitter", href: "https://twitter.com/supabase", path: "M12.6009 0.903908H15.0544L9.69434 7.03008L16 15.3664H11.0627L7.19566 10.3105L2.77087 15.3664H0.31595L6.04904 8.81379L0 0.903908H5.06262L8.55811 5.52524L12.6009 0.903908ZM11.7399 13.8979H13.0993L4.32392 2.29528H2.86506L11.7399 13.8979Z", viewBox: "0 0 16 16" },
   { label: "GitHub", href: "https://github.com/supabase", path: "M8 0C3.5816 0 0 3.58719 0 8.01357C0 11.5535 2.292 14.5575 5.4712 15.6167C5.8712 15.6903 6.0168 15.4431 6.0168 15.2303C6.0168 15.0407 6.0104 14.5359 6.0064 13.8679C3.7808 14.3519 3.3112 12.7935 3.3112 12.7935C2.948 11.8671 2.4232 11.6207 2.4232 11.6207C1.6968 11.1247 2.4784 11.1343 2.4784 11.1343C3.2808 11.1903 3.7032 11.9599 3.7032 11.9599C4.4168 13.1839 5.576 12.8303 6.0312 12.6255C6.1048 12.1079 6.3112 11.7551 6.54 11.5551C4.764 11.3527 2.896 10.6647 2.896 7.59438C2.896 6.71998 3.208 6.00398 3.7192 5.44398C3.6368 5.24158 3.3624 4.42639 3.7976 3.32399C3.7976 3.32399 4.4696 3.10799 5.9976 4.14479C6.65022 3.9668 7.32355 3.87614 8 3.87519C8.68 3.87839 9.364 3.96719 10.0032 4.14479C11.5304 3.10799 12.2008 3.32319 12.2008 3.32319C12.6376 4.42639 12.3624 5.24158 12.2808 5.44398C12.7928 6.00398 13.1032 6.71998 13.1032 7.59438C13.1032 10.6727 11.232 11.3503 9.4504 11.5487C9.73762 11.7959 9.99282 12.2847 9.99282 13.0327C9.99282 14.1031 9.98322 14.9679 9.98322 15.2303C9.98322 15.4447 10.1272 15.6943 10.5336 15.6159C12.1266 15.0816 13.5115 14.0602 14.4924 12.696C15.4733 11.3318 16.0007 9.69382 16 8.01357C16 3.58719 12.4176 0 8 0Z", viewBox: "0 0 16 16" },
@@ -16,6 +21,10 @@ function SocialIcon({ path, paths, viewBox }: { path?: string; paths?: string[];
 }
 
 export function Footer() {
+  const [themeOpen, setThemeOpen] = useState(false)
+  const { setTheme, theme } = useTheme()
+  const dropdownRef = useRef<HTMLDivElement>(null)
+
   const footerLinks = {
     Product: ["Pricing", "Method", "Integrations", "Changelog", "Documentation", "Download", "Switch", "Changelog", "Documentation", "Download", "Switch"],
     Solutions: ["AI Builders", "No Code", "Beginners", "Developers", "Startups", "Enterprise", "Healthcare", "Agents", "Startups", "Enterprise", "Healthcare", "Agents", "Enterprise", "Healthcare", "Agents"],
@@ -24,12 +33,23 @@ export function Footer() {
     Community: ["Contact us", "Community", "Events", "Open Source", "Contributing", "Community", "Events", "Open Source", "Contributing", "Community", "Events", "Open Source"],
   }
 
+  // Close drawer on outside click
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setThemeOpen(false)
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, [])
+
   return (
-    <footer className="border-t border-zinc-800 py-16 px-6" style={{ backgroundColor: "#09090B" }}>
+    <footer className="border-t border-border bg-background px-6 py-16 text-foreground">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 gap-x-5 gap-y-12 md:grid-cols-[1.65fr_repeat(5,minmax(0,1fr))] md:gap-x-6">
-          <div className="col-span-2 md:col-span-1 md:pr-14">
-            <div className="flex items-center gap-2 text-white font-semibold">
+        <div className="grid grid-cols-2 gap-x-5 gap-y-12 md:grid-cols-[1.65fr_repeat(5,minmax(0,1fr))] md:gap-x-8">
+          <div className="col-span-2 md:col-span-1 md:pr-15">
+            <div className="flex items-center gap-2 font-semibold text-foreground">
               <svg width="23" height="24" viewBox="0 0 109 113" fill="none" aria-hidden="true">
                 <path d="M63.7076 110.284C60.8481 113.885 55.0502 111.912 54.9813 107.314L53.9738 40.0627L99.1935 40.0627C107.384 40.0627 111.952 49.5228 106.859 55.9374L63.7076 110.284Z" fill="url(#footer-paint0)" />
                 <path d="M45.317 2.07103C48.1765 -1.53037 53.9745 0.442937 54.0434 5.041L54.4849 72.2922H9.83113C1.64038 72.2922 -2.92775 62.8321 2.1655 56.4175L45.317 2.07103Z" fill="#3ECF8E" />
@@ -44,7 +64,7 @@ export function Footer() {
             </div>
             <div className="flex space-x-5 mt-6 text-muted-foreground">
               {socialLinks.map(({ label, href, ...icon }) => (
-                <a key={label} href={href} target="_blank" rel="noreferrer" className="text-foreground-lighter hover:text-white/80 transition" aria-label={`Sprint on ${label}`}>
+                <a key={label} href={href} target="_blank" rel="noreferrer" className="text-muted-foreground transition hover:text-foreground" aria-label={`Sprint on ${label}`}>
                   <span className="sr-only">{label}</span>
                   <SocialIcon {...icon} />
                 </a>
@@ -53,8 +73,8 @@ export function Footer() {
             <p className="mt-8 max-w-[230px]  text-muted-foreground text-[15px] leading-7">Get product updates and news from Sprint.</p>
             <form className="mt-2 flex max-w-[240px] flex-col gap-2">
               <label htmlFor="footer-email" className="sr-only">Your email</label>
-              <input id="footer-email" type="email" placeholder="Your email" className="h-[38px] rounded-md border border-zinc-800 bg-black/60 px-3.5 text-[15px] text-foreground placeholder:text-muted-foreground outline-none focus-visible:ring-ring focus-visible:ring-2" />
-              <button type="submit" className="w-fit rounded-md border border-primary/70 bg-primary/40 px-3 py-1.5 text-sm text-white/70 transition-colors hover:bg-zinc-700">Subscribe</button>
+              <input id="footer-email" type="email" placeholder="Your email" className="h-[38px] rounded-md border border-input bg-background px-3.5 text-[15px] text-foreground placeholder:text-muted-foreground outline-none focus-visible:ring-ring focus-visible:ring-2" />
+              <button type="submit" className="w-fit rounded-md border border-primary bg-primary px-3 py-1.5 text-sm text-primary-foreground transition-colors hover:bg-primary/90">Subscribe</button>
             </form>
           </div>
 
@@ -64,7 +84,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-muted-foreground hover:text-white/80 transition-colors text-[15px] ">
+                    <a href="#" className="text-muted-foreground transition-colors hover:text-foreground text-[15px] ">
                       {link}
                     </a>
                   </li>
@@ -73,6 +93,57 @@ export function Footer() {
             </div>
           ))}
         </div>
+
+        {/* Updated Footer Bottom Bar with Border-t, Credits, and Interactive Theme Switcher Drawer */}
+        <div className="border-t border-zinc-800 mt-32 flex justify-between pt-8 relative">
+          <small className="text-muted-foreground text-[15px]">Powered by Priworth Inc © 2026</small>
+          
+          <div className="relative" ref={dropdownRef}>
+            <button 
+              id="user-settings-dropdown" 
+              onClick={() => setThemeOpen(!themeOpen)}
+              className="flex h-7 w-7 cursor-pointer items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground" 
+              type="button" 
+              aria-haspopup="menu" 
+              aria-expanded={themeOpen} 
+              data-state={themeOpen ? "open" : "closed"} 
+              tabIndex={0}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-moon h-[20px] w-[20px] rotate-90 transition-all dark:rotate-0" aria-hidden="true">
+                <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path>
+              </svg>
+              <span className="sr-only">Toggle theme</span>
+            </button>
+
+            {/* Popup Drawer Menu with Active Dot Indicator */}
+            {themeOpen && (
+              <div className="absolute bottom-full right-0 z-50 mb-2 w-36 rounded-lg border border-border bg-popover py-1.5 text-popover-foreground shadow-xl">
+                <button
+                  onClick={() => { setTheme("system"); setThemeOpen(false); }}
+                  className="flex w-full items-center gap-2 px-3 py-2 text-left text-xs text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+                >
+                  <span className="w-3 text-center text-emerald-400 font-bold">{theme === "system" ? "•" : ""}</span>
+                  <span>Default</span>
+                </button>
+                <button
+                  onClick={() => { setTheme("light"); setThemeOpen(false); }}
+                  className="flex w-full items-center gap-2 px-3 py-2 text-left text-xs text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+                >
+                  <span className="w-3 text-center text-emerald-400 font-bold">{theme === "light" ? "•" : ""}</span>
+                  <span>Light</span>
+                </button>
+                <button
+                  onClick={() => { setTheme("dark"); setThemeOpen(false); }}
+                  className="flex w-full items-center gap-2 px-3 py-2 text-left text-xs text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+                >
+                  <span className="w-3 text-center text-emerald-400 font-bold">{theme === "dark" ? "•" : ""}</span>
+                  <span>Dark</span>
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+
       </div>
     </footer>
   )

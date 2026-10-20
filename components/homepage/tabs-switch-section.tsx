@@ -70,7 +70,7 @@ export default function TabsSwitchSection() {
   const [activeTab, setActiveTab] = useState<TabKey>("product")
 
   return (
-    <section className="dark w-full bg-background pb-10 md:pb-10">
+    <section className="w-full bg-background pb-10 text-foreground md:pb-10">
       <div className="mx-auto max-w-6xl px-6">
 
         {/* Hero Section */}
@@ -82,13 +82,13 @@ export default function TabsSwitchSection() {
 
         {/* Navigation and Content Section */}
         <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as TabKey)} className="mb-0">
-          <div className="mx-auto mb-12 max-w-full overflow-x-auto">
-          <TabsList className="mx-auto grid w-full min-w-[480px] max-w-[600px] grid-cols-5">
-            <TabsTrigger value="product">Product</TabsTrigger>
-            <TabsTrigger value="services">Services</TabsTrigger>
-            <TabsTrigger value="company">Company</TabsTrigger>
-            <TabsTrigger value="portfolio">Portfolio</TabsTrigger>
-            <TabsTrigger value="blog">Blog</TabsTrigger>
+          <div className="mx-auto mb-8 max-w-full">
+          <TabsList className="mx-auto grid w-full max-w-[600px] grid-cols-5 gap-0.5 p-1">
+            <TabsTrigger className="px-1 text-[11px] sm:px-3 sm:text-sm" value="product">Product</TabsTrigger>
+            <TabsTrigger className="px-1 text-[11px] sm:px-3 sm:text-sm" value="services">Services</TabsTrigger>
+            <TabsTrigger className="px-1 text-[11px] sm:px-3 sm:text-sm" value="company">Company</TabsTrigger>
+            <TabsTrigger className="px-1 text-[11px] sm:px-3 sm:text-sm" value="portfolio">Portfolio</TabsTrigger>
+            <TabsTrigger className="px-1 text-[11px] sm:px-3 sm:text-sm" value="blog">Blog</TabsTrigger>
           </TabsList>
           </div>
           {Object.entries(tabContent).map(([key, content]) => (
@@ -96,14 +96,14 @@ export default function TabsSwitchSection() {
               <Card className="mb-0 py-0">
                 <CardContent className="p-0">
                   <div className="flex flex-col md:flex-row">
-                    <div className="md:w-1/2 p-6 md:p-12">
+                    <div className="p-5 md:w-1/2 md:p-12">
                       <CardHeader className="p-0">
                         <CardTitle className="text-base sm:text-xl mb-4">{content.title}</CardTitle>
                       </CardHeader>
                       <p className="text-muted-foreground mb-6">{content.description}</p>
                       <ul className="space-y-3 mb-6">
                         {content.features.map((feature, index) => (
-                          <li key={index} className="flex items-center text-white/90">
+                          <li key={index} className="flex items-center text-foreground">
                             <Check className="mr-2 h-5 w-5 shrink-0 text-primary" />
                             {feature}
                           </li>

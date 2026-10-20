@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card"
 
 export default function BannerCtaSection() {
   return (
-    <section className="dark w-full bg-background py-10 md:py-10">
+    <section className="w-full bg-background py-0 text-foreground md:py-00">
       <div className="mx-auto max-w-6xl px-6">
         <Card className="overflow-hidden bg-card transition-colors duration-300 py-0">
           <div className="flex flex-col lg:flex-row">

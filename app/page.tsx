@@ -8,6 +8,11 @@ const structuredData = {
   operatingSystem: "Web",
   description: "A purpose-built system for planning and building modern software products.",
   url: "https://sprint.example.com",
+  publisher: {
+    "@type": "Organization",
+    name: "Sprint",
+    url: "https://sprint.example.com",
+  },
 }
 
 export default function Home() {

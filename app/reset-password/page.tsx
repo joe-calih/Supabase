@@ -3,6 +3,8 @@
 import Link from "next/link"
 import { useState } from "react"
 import { createSupabaseBrowserClient } from "@/lib/supabase/browser"
+import { AuthBrand } from "@/components/auth/auth-brand"
+import { Navbar } from "@/components/homepage/navbar"
 
 export default function ResetPasswordPage() {
   const [message, setMessage] = useState<string | null>(null)
@@ -29,11 +31,11 @@ export default function ResetPasswordPage() {
   }
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-background px-6 py-16 text-foreground">
-      <div className="w-full max-w-md">
-        <Link href="/" className="mb-10 flex items-center justify-center text-lg font-semibold">Sprint</Link>
-        <div className="rounded-xl border border-border bg-card/60 p-8 shadow-2xl">
-          <h1 className="text-2xl font-medium">Choose a new password</h1>
+    <main className="min-h-screen bg-background px-6 pb-16 pt-28 text-foreground">
+      <Navbar />
+      <div className="mx-auto flex w-full max-w-2xl flex-col items-center">
+        <div className="w-full rounded-xl border border-border bg-card p-5 shadow-xl sm:p-8">
+          <h1 className="text-center text-2xl font-medium">Choose a new password</h1>
           <form onSubmit={submit} className="mt-8 space-y-4">
             <label className="block text-sm">New password<input name="password" type="password" minLength={8} required className="mt-2 h-10 w-full rounded-md border border-input bg-transparent px-3 outline-none focus-visible:ring-ring focus-visible:ring-2" /></label>
             <label className="block text-sm">Confirm password<input name="confirmation" type="password" minLength={8} required className="mt-2 h-10 w-full rounded-md border border-input bg-transparent px-3 outline-none focus-visible:ring-ring focus-visible:ring-2" /></label>
@@ -42,6 +44,7 @@ export default function ResetPasswordPage() {
             <button type="submit" className="h-10 w-full rounded-md bg-primary text-sm font-medium text-primary-foreground hover:bg-primary/90">Update password</button>
           </form>
         </div>
+        <AuthBrand />
       </div>
     </main>
   )

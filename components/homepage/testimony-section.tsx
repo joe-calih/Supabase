@@ -5,7 +5,7 @@ export function Testimony() {
 
     
   return (
-       <section id="testimonials" className="dark w-full bg-background py-4">
+       <section id="testimonials" className="w-full bg-background py-2 text-foreground">
           <div className="mx-auto max-w-6xl px-6">
             <div className="grid gap-6 lg:grid-cols-3">
               <Card>
@@ -16,7 +16,7 @@ export function Testimony() {
                       <AvatarImage src="/img/authors/08.jpg?height=40&width=40" alt="John Doe" />
                       <AvatarFallback>JD</AvatarFallback>
                     </Avatar>
-                    <p className="font-semibold">John Doe — TechStart</p>
+                      <p className="font-semibold text-card-foreground">John Doe — TechStart</p>
                   </div>
                 </CardContent>
               </Card>
@@ -29,7 +29,7 @@ export function Testimony() {
                       <AvatarImage src="/img/authors/07.webp?height=40&width=40" alt="Jane Smith" />
                       <AvatarFallback>JS</AvatarFallback>
                     </Avatar>
-                    <p className="font-semibold">Jane Smith — GrowFast</p>
+                    <p className="font-semibold text-card-foreground">Jane Smith — GrowFast</p>
                   </div>
                 </CardContent>
               </Card>
@@ -41,7 +41,7 @@ export function Testimony() {
                       <AvatarImage src="/img/authors/06.png?height=40&width=40" alt="Mike Johnson" />
                       <AvatarFallback>MJ</AvatarFallback>
                     </Avatar>
-                    <p className="font-semibold">Mike Johnson — Glassdoor</p>
+                    <p className="font-semibold text-card-foreground">Mike Johnson — Glassdoor</p>
                   </div>
                 </CardContent>
               </Card>

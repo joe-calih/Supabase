@@ -1,12 +1,14 @@
-import Link from "next/link"
 import { AuthForm } from "@/components/auth/auth-form"
+import { AuthBrand } from "@/components/auth/auth-brand"
+import { Navbar } from "@/components/homepage/navbar"
 
 export default function LoginPage() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-background px-6 py-16 text-foreground">
-      <div className="w-full max-w-md">
-        <Link href="/" className="mb-10 flex items-center justify-center gap-2 text-lg font-semibold">Sprint</Link>
+    <main className="min-h-screen bg-background px-6 pb-16 pt-28 text-foreground">
+      <Navbar />
+      <div className="mx-auto flex w-full max-w-2xl flex-col items-center">
         <AuthForm mode="login" />
+        <AuthBrand />
       </div>
     </main>
   )
