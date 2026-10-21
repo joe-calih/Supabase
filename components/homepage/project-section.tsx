@@ -27,7 +27,7 @@ const projectTemplates: Array<[string, string, LucideIcon, string]> = [
 
 export function ProjectSection() {
   return (
-    <section id="examples" className="border-b border-border bg-background py-24 text-foreground">
+    <section id="examples" className="bg-background py-10 text-foreground">
       <div className="mx-auto flex max-w-6xl flex-col gap-16 px-6">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <h2 className="max-w-xl text-2xl text-muted-foreground md:text-4xl">
@@ -60,11 +60,10 @@ export function ProjectSection() {
           <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {projectTemplates.map(([title, description, Icon, href]) => (
               <a key={title} href={href} target="_blank" rel="noreferrer" className="group">
-                <Card className="h-full border-border bg-card px-6 py-10 transition-colors hover:bg-accent">
-                  <Icon className="mb-3 h-5 w-5 text-muted-foreground" />
+                <Card className="h-full border-border bg-card px-6 py-6 transition-colors hover:bg-accent">
+                  <Icon className="mt-2 h-5 w-5 text-muted-foreground" />
                   <CardTitle className="text-sm font-medium text-card-foreground">{title}</CardTitle>
-                  <p className="mt-1 line-clamp-3 text-sm text-muted-foreground">{description}</p>
-                  <ArrowUpRight className="mt-6 h-4 w-4 text-muted-foreground transition-colors group-hover:text-foreground" />
+                  <p className="mt-0 line-clamp-3 text-sm text-muted-foreground">{description}</p>
                 </Card>
               </a>
             ))}
@@ -77,7 +76,7 @@ export function ProjectSection() {
 
 function Preview({ type }: { type: string }) {
   return (
-    <div className="overflow-hidden rounded-t-lg border border-border bg-background shadow-lg">
+    <div className="overflow-hidden rounded-lg border border-border bg-background shadow-lg">
       <div className="flex items-center gap-1.5 border-b border-border px-3 py-2.5">
         <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/30" />
         <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/30" />

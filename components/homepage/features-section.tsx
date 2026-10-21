@@ -103,13 +103,13 @@ export function FeaturesSection() {
   return (
     <section id="products" className="relative bg-background text-foreground">
       <div className="mx-auto max-w-6xl px-6 pb-8">
-        <div className="grid grid-cols-1 gap-2 px-2 sm:grid-cols-2 sm:px-0 md:grid-cols-12 md:gap-4 xl:gap-3 2xl:gap-6">
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-12 md:gap-4 xl:gap-3 2xl:gap-6">
           {topFeatures.map((feature) => (
             <FeatureCard key={feature.title} feature={feature} />
           ))}
         </div>
 
-        <div className="mt-2 grid grid-cols-1 gap-2 px-2 sm:grid-cols-2 sm:px-0 md:mt-3 md:grid-cols-4 md:gap-4 xl:gap-3 2xl:gap-6">
+        <div className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-2 md:mt-3 md:grid-cols-4 md:gap-4 xl:gap-3 2xl:gap-6">
           {bottomFeatures.map((feature) => (
             <FeatureCard key={feature.title} feature={feature} />
           ))}
@@ -129,8 +129,8 @@ function FeatureCard({ feature }: { feature: FeatureCardProps }) {
 
   return (
     <a href={feature.href} className={`group relative flex w-full ${feature.className ?? ""}`}>
-      <Card className="relative flex min-h-[94px] w-full flex-col overflow-hidden rounded-xl border-border bg-card text-muted-foreground transition-colors hover:bg-accent md:min-h-[400px]">
-        <CardHeader className="relative z-10 flex max-w-none flex-col items-start gap-1.5 p-3 md:ml-2 md:mt-2 md:max-w-[270px] md:gap-4 md:p-6">
+      <Card className="relative flex min-h-[82px] w-full flex-col overflow-hidden rounded-xl border-border bg-card text-muted-foreground transition-colors hover:bg-accent md:min-h-[390px]">
+        <CardHeader className="relative z-10 flex max-w-none flex-col items-start gap-1 px-4 py-2.5 md:ml-2 md:mt-2 md:max-w-[270px] md:gap-4 md:p-6">
           <CardTitle className="flex items-center gap-2 text-sm font-normal text-card-foreground">
             <Icon className="h-[18px] w-[18px]" />
             {feature.title}

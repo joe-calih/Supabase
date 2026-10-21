@@ -18,7 +18,7 @@ const IntegrationSection = () => {
         <div className="mb-0 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
           {integrations.map((integration, index) => (
             <div key={index} className="group transition-transform duration-300 hover:-translate-y-1">
-              <div className="rounded-xl p-4 text-center transition-colors hover:bg-accent sm:p-6">
+              <div className="rounded-xl p-4 text-center transition-colors sm:p-6">
                 <div
                   className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/15 transition-colors duration-300 group-hover:bg-primary/25"
                 >

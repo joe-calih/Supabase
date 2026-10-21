@@ -30,7 +30,7 @@ export default function ForgotPasswordPage() {
   return (
     <main className="min-h-screen bg-background px-6 pb-16 pt-28 text-foreground">
       <Navbar />
-      <div className="mx-auto flex w-full max-w-2xl flex-col items-center">
+      <div className="mx-auto flex w-full max-w-96 flex-col items-center">
         <div className="w-full rounded-xl border border-border bg-card p-5 shadow-xl sm:p-8">
           <h1 className="text-center text-2xl font-medium">Reset your password</h1>
           <p className="mt-2 text-center text-sm text-muted-foreground">Enter your email and we&apos;ll send you a secure reset link.</p>

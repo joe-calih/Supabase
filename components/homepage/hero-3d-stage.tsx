@@ -25,6 +25,7 @@ import { OpenSourceSection } from "./open-source-section"
 import { HeaderHeroSection } from "./header-hero-section"
 import { FeaturesSection } from "./features-section"
 import { ProjectSection } from "./project-section"
+import { KeywordResearchCta } from "./keyword-research-cta"
 
 export function Hero3DStage() {
   const [yOffset, setYOffset] = useState(0)
@@ -74,17 +75,15 @@ export function Hero3DStage() {
 
           <FeaturesSection />
           <IntegrationSection />
+          <KeywordResearchCta />
           <ProjectSection />
+          <ProductDirectionSection />
           <LogoCloud />
           <TabsSwitchSection />
           <Testimony />
           <PricingSection />
-          <RankingSection />
-          <StepsSection />
-          <ProcessSectionNew />
           <BannerCtaSection />
           <OpenSourceSection />
-          <ProductDirectionSection />
           <CTASection />
           <SecurityStrip />
           <Footer />

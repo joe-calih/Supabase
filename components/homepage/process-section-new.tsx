@@ -14,7 +14,7 @@ export function ProcessSectionNew() {
         <ol className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, index) => (
             <li key={step.title} className="group flex items-start">
-              <span className="mr-3 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary font-bold text-primary-foreground transition-transform group-hover:scale-110">
+              <span className="mr-3 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-muted font-bold text-muted-foreground transition-transform group-hover:scale-110">
                 {index + 1}
               </span>
               <div className="space-y-2">

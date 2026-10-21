@@ -15,11 +15,12 @@
 /* Custom thin scrollbar styling */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--muted-foreground) var(--background);
+  scrollbar-color: color-mix(in oklch, var(--muted-foreground) 72%, var(--foreground)) var(--background);
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -27,12 +28,13 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--muted-foreground);
-  border-radius: 3px;
+  background: color-mix(in oklch, var(--muted-foreground) 72%, var(--foreground));
+  border: 2px solid var(--background);
+  border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--foreground);
+  background: color-mix(in oklch, var(--muted-foreground) 90%, var(--foreground));
 }
 
 :root {

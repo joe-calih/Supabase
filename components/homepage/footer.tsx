@@ -29,7 +29,7 @@ export function Footer() {
     Product: ["Pricing", "Method", "Integrations", "Changelog", "Documentation", "Download", "Switch", "Changelog", "Documentation", "Download", "Switch"],
     Solutions: ["AI Builders", "No Code", "Beginners", "Developers", "Startups", "Enterprise", "Healthcare", "Agents", "Startups", "Enterprise", "Healthcare", "Agents", "Enterprise", "Healthcare", "Agents"],
     Resources: ["Developers", "Status", "Startups", "Report vulnerability", "DPA", "Privacy", "Terms", "Startups", "Report vulnerability", "DPA", "Privacy", "Terms"],
-    Company: ["About", "Customers", "Careers", "README", "Quality", "Brand", "Customers", "Careers", "README", ],
+    Company: ["About", "Customers", "Partners", "Careers", "README", "Quality", "Brand", "Customers", "Careers", "README", ],
     Community: ["Contact us", "Community", "Events", "Open Source", "Contributing", "Community", "Events", "Open Source", "Contributing", "Community", "Events", "Open Source"],
   }
 
@@ -84,7 +84,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-muted-foreground transition-colors hover:text-foreground text-[15px] ">
+                    <a href={link === "Partners" ? "/partners" : link === "Open Source" ? "/open-source" : "#"} className="text-muted-foreground transition-colors hover:text-foreground text-[15px] ">
                       {link}
                     </a>
                   </li>

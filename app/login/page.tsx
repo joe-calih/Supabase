@@ -6,7 +6,7 @@ export default function LoginPage() {
   return (
     <main className="min-h-screen bg-background px-6 pb-16 pt-28 text-foreground">
       <Navbar />
-      <div className="mx-auto flex w-full max-w-2xl flex-col items-center">
+      <div className="mx-auto flex w-full max-w-96 flex-col items-center">
         <AuthForm mode="login" />
         <AuthBrand />
       </div>
