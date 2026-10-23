@@ -82,9 +82,9 @@ export function Footer() {
             <div key={category}>
               <h3 className="text-foreground font-medium text-sm mb-4">{category}</h3>
               <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a href={link === "Partners" ? "/partners" : link === "Open Source" ? "/open-source" : "#"} className="text-muted-foreground transition-colors hover:text-foreground text-[15px] ">
+                {links.map((link, index) => (
+                  <li key={`${category}-${link}-${index}`}>
+                    <a href={link === "Partners" ? "/partners" : link === "Careers" ? "/careers" : link === "Open Source" ? "/open-source" : "#"} className="text-muted-foreground transition-colors hover:text-foreground text-[15px] ">
                       {link}
                     </a>
                   </li>
