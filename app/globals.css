@@ -205,8 +205,8 @@ nav [data-radix-navigation-menu-trigger] {
 
 @theme inline {
       --text-sm: .875rem;
-  --font-sans: "Geist", "Geist Fallback";
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --font-sans: "SF Pro Display", "Segoe UI", sans-serif;
+  --font-mono: "SFMono-Regular", "SF Mono", "Consolas", monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
