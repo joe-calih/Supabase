@@ -19,9 +19,9 @@ function SprintMark() {
   )
 }
 
-export function Navbar() {
+export function Navbar({ fixed = true }: { fixed?: boolean }) {
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
+    <nav className={`${fixed ? "fixed" : "relative"} left-0 right-0 top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md`}>
       <div className="w-full flex justify-center px-6 py-4">
         <div className="w-full max-w-6xl flex items-center justify-between relative">
           
@@ -472,6 +472,13 @@ export function Navbar() {
                 <NavigationMenu.Link asChild>
                   <Link href="/contact" className="text-sm text-zinc-400 hover:text-white transition-colors block">
                     Contact
+                  </Link>
+                </NavigationMenu.Link>
+              </NavigationMenu.Item>
+                            <NavigationMenu.Item>
+                <NavigationMenu.Link asChild>
+                  <Link href="/docs" className="text-sm text-zinc-400 hover:text-white transition-colors block">
+                    Docs
                   </Link>
                 </NavigationMenu.Link>
               </NavigationMenu.Item>

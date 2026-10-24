@@ -1,12 +1,10 @@
 import Link from "next/link"
 import {
   Activity,
-  Box,
   ChevronDown,
   Database,
   FileKey2,
   FunctionSquare,
-  LogIn,
   Menu,
   Server,
   ShieldCheck,
@@ -26,13 +24,7 @@ const products = [
 export function ProductNav() {
   return (
     <nav className="relative z-30 w-full border-b border-border bg-background/95 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center gap-1 overflow-x-auto px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="mr-3 flex shrink-0 items-center gap-2 py-4 text-sm font-semibold tracking-tight">
-          <span className="grid size-6 place-items-center rounded-md bg-primary text-primary-foreground">
-            <Box className="size-4" />
-          </span>
-          <span className="hidden sm:inline">supabase</span>
-        </Link>
+      <div className="mx-auto flex max-w-7xl items-center justify-center gap-1 overflow-x-auto px-4 sm:px-6 lg:px-8">
         {products.map(({ label, href, icon: Icon }) => (
           <Link
             key={label}
@@ -43,18 +35,7 @@ export function ProductNav() {
             <span className="hidden md:inline">{label}</span>
           </Link>
         ))}
-        <div className="ml-auto hidden shrink-0 items-center gap-2 pl-3 sm:flex">
-          <Button variant="ghost" size="sm" asChild>
-            <Link href="/login">
-              <LogIn className="size-4" />
-              Log in
-            </Link>
-          </Button>
-          <Button size="sm" asChild>
-            <Link href="/signup">Start your project</Link>
-          </Button>
-        </div>
-        <Button variant="ghost" size="icon" className="ml-auto shrink-0 sm:hidden" aria-label="Open menu">
+        <Button variant="ghost" size="icon" className="ml-2 shrink-0 sm:hidden" aria-label="Open menu">
           <Menu className="size-5" />
         </Button>
       </div>

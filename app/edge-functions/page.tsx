@@ -1,8 +1,10 @@
 import Link from "next/link"
 import { ArrowRight, Check, Globe2, LockKeyhole, MonitorCog, Terminal, Zap } from "lucide-react"
+import type { LucideIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ProductNav } from "@/components/product-nav"
+import { Navbar } from "@/components/homepage/navbar"
 
 const examples = [
   ["Sending Emails", "Send emails in Edge Functions with Resend."],
@@ -13,7 +15,7 @@ const examples = [
   ["Upload files to Storage", "Process multipart/form-data."],
 ]
 
-const benefits = [
+const benefits: Array<[string, string, LucideIcon]> = [
   ["Global presence", "Edge functions run globally or can be pinned to your database's proximity", Globe2],
   ["Automatic scaling", "Seamlessly scale with usage without any manual tuning", Zap],
   ["Secure", "Scale with confidence with SSL, Firewall and DDOS protection built in", LockKeyhole],
@@ -23,7 +25,8 @@ const benefits = [
 export default function EdgeFunctionsPage() {
   return (
     <main className="min-h-screen bg-background">
-      <ProductNav />
+      <Navbar />
+      <div className="pt-[73px]"><ProductNav /></div>
       <section className="mx-auto max-w-6xl px-6 pb-20 pt-20 text-center sm:pt-28">
         <p className="mb-5 font-mono text-xs uppercase tracking-[0.25em] text-primary">Edge Functions</p>
         <h1 className="mx-auto max-w-4xl text-5xl font-medium tracking-tight sm:text-7xl">

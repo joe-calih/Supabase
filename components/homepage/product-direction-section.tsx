@@ -211,22 +211,14 @@ export function ProductDirectionSection() {
               </div>
 
               {/* Content */}
-              <div className="p-5">
-                {/* Icon */}
-                <div className="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center mb-4">
-                  <svg className="w-5 h-5 text-green-500" viewBox="0 0 16 16" fill="currentColor">
-                    <path d="M8 8a2 2 0 100-4 2 2 0 000 4zM8 9c-2.67 0-8 1.34-8 4v1h16v-1c0-2.66-5.33-4-8-4z" />
-                  </svg>
-                </div>
+              <div className="p-8">
+
 
                 {/* Title with cursor */}
                 <div className="mb-3 relative inline-block">
                   <span className="text-zinc-200 text-lg font-medium">Collaborate on</span>
                   <span className="relative mx-1">
                     <span className="text-zinc-200 text-lg font-medium bg-green-500/20 px-0.5">ideas</span>
-                    <span className="absolute -top-4 right-0 px-1.5 py-0.5 rounded text-[10px] bg-green-600 text-white">
-                      zoe
-                    </span>
                   </span>
                 </div>
 
@@ -234,12 +226,10 @@ export function ProductDirectionSection() {
                 <p className="text-zinc-400 text-sm leading-relaxed mb-6">
                   Write down product ideas and work together on{" "}
                   <span className="relative inline">
-                    <span className="bg-purple-500/20 px-0.5">fea</span>
-                    <span className="absolute -bottom-4 left-0 px-1.5 py-0.5 rounded text-[10px] bg-purple-600 text-white">
-                      quinn
-                    </span>
+                    <span className="bg-purple-500/20 px-0.5">feature</span>
+
                   </span>
-                  ture specs in realtime, multiplayer project documents. Add **style** and ##structure with rich-text
+                  specs in realtime, multiplayer project documents. Add **style** and ##structure with rich-text
                   formatting options.
                 </p>
 
@@ -273,15 +263,7 @@ export function ProductDirectionSection() {
                     <div className="h-2 bg-zinc-700/30 rounded w-16" />
                   </div>
                   <div className="h-6" />
-                  <div className="flex gap-2 flex-wrap">
-                    <div className="h-2 bg-zinc-700/30 rounded w-24" />
-                    <div className="h-2 bg-zinc-700/50 rounded w-16" />
-                    <div className="h-2 bg-zinc-700/30 rounded w-20" />
-                    <div className="h-2 bg-orange-500/40 rounded w-8" />
-                    <div className="h-2 bg-zinc-700/50 rounded w-12" />
-                    <div className="h-2 bg-zinc-700/30 rounded w-28" />
-                    <div className="h-2 bg-orange-500/40 rounded w-16" />
-                  </div>
+                
                 </div>
               </div>
             </div>
