@@ -51,6 +51,7 @@ export default function NotFound() {
           Head back
         </Link>
 
+
         <p className="text-xs text-muted-foreground">
           <Link href="/docs" className="underline hover:text-foreground">
             Documentation

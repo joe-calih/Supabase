@@ -15,17 +15,17 @@ const topics = [
 ]
 
 const featuredGuides = [
-  ["Migrate from Amazon RDS to Supabase", "Migrate your Amazon RDS MySQL or MS SQL database to Supabase.", "/kb/guides/migrate-from-amazon-rds"],
-  ["Migrate from Auth0 to Supabase Auth", "Migrate your users from Auth0 to Supabase Auth.", "/kb/guides/migrate-from-auth0"],
-  ["Migrate from Firebase Auth to Supabase", "Migrate Firebase Auth users to Supabase Auth.", "/kb/guides/migrate-from-firebase-auth"],
+  ["Migrate from Amazon RDS to Sprint", "Migrate your Amazon RDS MySQL or MS SQL database to Sprint.", "/kb/guides/migrate-from-amazon-rds"],
+  ["Migrate from Auth0 to Sprint Auth", "Migrate your users from Auth0 to Sprint Auth.", "/kb/guides/migrate-from-auth0"],
+  ["Migrate from Firebase Auth to Sprint", "Migrate Firebase Auth users to Sprint Auth.", "/kb/guides/migrate-from-firebase-auth"],
 ]
 
 const troubleshooting = [
   ["42501 : permission denied for table http_request_queue", "Database", "/kb/troubleshooting/42501--permission-denied-for-table-httprequestqueue-KnozmQ"],
-  ["All about Supabase Egress", "Platform, Database, Storage", "/kb/troubleshooting/all-about-supabase-egress-a_Sg_e"],
+  ["All about Sprint Egress", "Platform, Database, Storage", "/kb/troubleshooting/all-about-Sprint-egress-a_Sg_e"],
   ["An \"invalid response was received from the upstream server\" error when querying auth", "Auth", "/kb/troubleshooting/an-invalid-response-was-received-from-the-upstream-server-error-when-querying-auth-RI4Vl-"],
   ["App Store Rejection: 'TLS error' in IPv6-only environments", "Platform", "/kb/troubleshooting/app-store-rejection-tls-error-in-ipv6-only-environments"],
-  ["Are all features available in self-hosted Supabase?", "Platform", "/kb/troubleshooting/are-all-features-available-in-self-hosted-supabase-THPcqw"],
+  ["Are all features available in self-hosted Sprint?", "Platform", "/kb/troubleshooting/are-all-features-available-in-self-hosted-Sprint-THPcqw"],
   ["Auth error: {401: invalid claim: missing sub}", "Auth", "/kb/troubleshooting/auth-error-401-invalid-claim-missing-sub--AFwMR"],
   ["Auth error: '500: Database error querying schema'", "Auth, Database", "/kb/troubleshooting/auth-error-500-database-error-querying-schema"],
   ["Auth error: 503 AuthRetryableFetchError", "Auth", "/kb/troubleshooting/auth-error-503-authretryablefetcherror"],
@@ -34,23 +34,23 @@ const troubleshooting = [
   ["Avoiding timeouts in long running queries", "Database, Platform", "/kb/troubleshooting/avoiding-timeouts-in-long-running-queries-6nmbdN"],
   ["MIGRATIONS_FAILED: missing tables or an incomplete schema on your branch", "Database, Platform", "/kb/troubleshooting/branch-in-migrations-failed-status"],
   ["Canceling statement due to \"statement timeout\"", "Database", "/kb/troubleshooting/canceling-statement-due-to-statement-timeout-581wFv"],
-  ["Can’t Access Supabase Project When Using Lovable Cloud", "Platform", "/kb/troubleshooting/cant-access-supabase-project-lovable-cloud"],
+  ["Can’t Access Sprint Project When Using Lovable Cloud", "Platform", "/kb/troubleshooting/cant-access-Sprint-project-lovable-cloud"],
   ["Certain operations are too complex to perform directly using the client libraries.", "Database", "/kb/troubleshooting/certain-operations-are-too-complex-to-perform-directly-using-the-client-libraries-8JaphH"],
-  ["Change email associated with Supabase account", "Platform, Auth", "/kb/troubleshooting/change-email-associated-with-supabase-account-T5eHNT"],
+  ["Change email associated with Sprint account", "Platform, Auth", "/kb/troubleshooting/change-email-associated-with-Sprint-account-T5eHNT"],
 ]
 
 const allGuides = [
-  ["Migrate from Amazon RDS to Supabase", "Migration, Database", "/kb/guides/migrate-from-amazon-rds"],
-  ["Migrate from Auth0 to Supabase Auth", "Migration, Auth", "/kb/guides/migrate-from-auth0"],
-  ["Migrate from Firebase Auth to Supabase", "Migration, Auth", "/kb/guides/migrate-from-firebase-auth"],
-  ["Migrate from Firebase Storage to Supabase", "Migration, Storage", "/kb/guides/migrate-from-firebase-storage"],
-  ["Migrate from Firebase Firestore to Supabase", "Migration, Database", "/kb/guides/migrate-from-firestore-data"],
-  ["Migrate from Heroku to Supabase", "Migration, Database", "/kb/guides/migrate-from-heroku"],
-  ["Migrate from MSSQL to Supabase", "Migration, Database", "/kb/guides/migrate-from-mssql"],
-  ["Migrate from MySQL to Supabase", "Migration, Database", "/kb/guides/migrate-from-mysql"],
-  ["Migrate from Neon to Supabase", "Migration, Database", "/kb/guides/migrate-from-neon"],
-  ["Migrate from Postgres to Supabase", "Migration, Database", "/kb/guides/migrate-from-postgres"],
-  ["Migrate from Render to Supabase", "Migration, Database", "/kb/guides/migrate-from-render"],
+  ["Migrate from Amazon RDS to Sprint", "Migration, Database", "/kb/guides/migrate-from-amazon-rds"],
+  ["Migrate from Auth0 to Sprint Auth", "Migration, Auth", "/kb/guides/migrate-from-auth0"],
+  ["Migrate from Firebase Auth to Sprint", "Migration, Auth", "/kb/guides/migrate-from-firebase-auth"],
+  ["Migrate from Firebase Storage to Sprint", "Migration, Storage", "/kb/guides/migrate-from-firebase-storage"],
+  ["Migrate from Firebase Firestore to Sprint", "Migration, Database", "/kb/guides/migrate-from-firestore-data"],
+  ["Migrate from Heroku to Sprint", "Migration, Database", "/kb/guides/migrate-from-heroku"],
+  ["Migrate from MSSQL to Sprint", "Migration, Database", "/kb/guides/migrate-from-mssql"],
+  ["Migrate from MySQL to Sprint", "Migration, Database", "/kb/guides/migrate-from-mysql"],
+  ["Migrate from Neon to Sprint", "Migration, Database", "/kb/guides/migrate-from-neon"],
+  ["Migrate from Postgres to Sprint", "Migration, Database", "/kb/guides/migrate-from-postgres"],
+  ["Migrate from Render to Sprint", "Migration, Database", "/kb/guides/migrate-from-render"],
 ]
 
 const filters = ["All", "Storage", "Auth", "Database", "Edge Functions", "Realtime", "Platform"]
@@ -70,7 +70,7 @@ export function KnowledgeBase() {
         <div className="mx-auto max-w-5xl px-6 py-16 text-center sm:py-24">
           <BookOpen className="mx-auto mb-5 size-9 text-primary" aria-hidden="true" />
           <h1 className="text-4xl tracking-tight sm:text-6xl">Knowledge base</h1>
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">In-depth guides, tutorials, troubleshooting, and explainers for best practices for Supabase</p>
+          <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">In-depth guides, tutorials, troubleshooting, and explainers for best practices for Sprint</p>
           <div className="relative mx-auto mt-8 max-w-xl">
             <Search className="absolute left-3 top-1/2 size-5 -translate-y-1/2 text-muted-foreground" aria-hidden="true" />
             <Input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search guides" className="h-12 pl-11 pr-20 text-base" aria-label="Search guides" />
