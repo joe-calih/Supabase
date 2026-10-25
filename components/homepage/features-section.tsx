@@ -169,7 +169,7 @@ export function CustomerStoriesSection() {
         </div>
 
         {/* Desktop View */}
-        <div className="hidden lg:flex min-h-[480px] gap-2">
+        <div className="hidden lg:flex min-h-120 gap-2">
           {stories.map((story) => {
             const isActive = activeId === story.id
             return (
@@ -181,7 +181,7 @@ export function CustomerStoriesSection() {
                 onKeyDown={(e) => e.key === "Enter" && setActiveId(story.id)}
                 className={cn(
                   "group relative flex cursor-pointer flex-col items-start gap-8 overflow-hidden rounded-lg transition-all duration-500 ease-in-out",
-                  isActive ? "flex-1 p-8" : "w-[76px] shrink-0 px-5 py-8"
+                  isActive ? "flex-1 p-8" : "w-19 shrink-0 px-5 py-8"
                 )}
                 style={{
                   background: story.bgGradient || story.bgColor,
@@ -201,7 +201,7 @@ export function CustomerStoriesSection() {
                 {/* Expanded Card Content */}
                 <div
                   className={cn(
-                    "flex flex-1 flex-col gap-1.5 w-[35rem] transition-all duration-300",
+                    "flex flex-1 flex-col gap-1.5 w-140 transition-all duration-300",
                     isActive
                       ? "opacity-100 blur-0"
                       : "pointer-events-none opacity-0 blur-sm"

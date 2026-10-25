@@ -41,13 +41,13 @@ export function Navbar({ fixed = true }: { fixed?: boolean }) {
                 </NavigationMenu.Trigger>
                 
                 <NavigationMenu.Content className="absolute top-full left-1/2 -translate-x-1/2 mt-2 z-50 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0">
-                  <div className="relative overflow-hidden rounded-xl border border-border bg-popover text-popover-foreground shadow-2xl md:w-[960px]">
+                  <div className="relative overflow-hidden rounded-xl border border-border bg-popover text-popover-foreground shadow-2xl md:w-240">
                     <div className="flex flex-col lg:flex-row">
                       <div className="flex flex-col bg-popover">
                         <div className="flex flex-row p-6 pt-5 gap-6">
                           
                           {/* Features Column */}
-                          <div className="flex flex-col gap-4 w-[280px] lg:w-[250px]">
+                          <div className="flex flex-col gap-4 w-70 lg:w-62.5">
                             <div className="flex items-center gap-1 text-zinc-500 text-xs uppercase tracking-widest font-mono">Features</div>
                             <ul className="flex flex-col gap-4 list-none p-0 m-0">
                               <li>
@@ -297,11 +297,11 @@ export function Navbar({ fixed = true }: { fixed?: boolean }) {
                 </NavigationMenu.Trigger>
                 
                 <NavigationMenu.Content className="absolute top-full left-1/2 -translate-x-1/2 mt-2 z-50 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0">
-                  <div className="relative overflow-hidden rounded-xl border border-border bg-popover text-popover-foreground shadow-2xl md:w-[960px]">
+                  <div className="relative overflow-hidden rounded-xl border border-border bg-popover text-popover-foreground shadow-2xl md:w-240">
                     <div className="flex flex-col lg:flex-row">
                       
                       {/* Left Side: Developers & Resources sections */}
-                      <div className="grid w-full grid-cols-2 gap-3 bg-popover px-6 py-5 lg:w-[470px]">
+                      <div className="grid w-full grid-cols-2 gap-3 bg-popover px-6 py-5 lg:w-117.5">
                         
                         {/* Developers Column */}
                         <div className="p-0 flex flex-col gap-6">
