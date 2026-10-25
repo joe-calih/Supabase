@@ -38,7 +38,7 @@ export function ProductDirectionSection() {
         {/* Description */}
         <p className="text-zinc-400 text-lg max-w-md mb-16">
           <span className="text-white font-medium">Align your team around a unified product timeline.</span> Plan,
-          manage, and track all product initiatives with Sprint's visual planning tools.
+          manage, and track all product initiatives with Sprint&apos;s visual planning tools.
         </p>
 
 

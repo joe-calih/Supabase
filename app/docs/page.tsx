@@ -338,7 +338,7 @@ export default function DocsPage() {
                   </Link>
                 </div>
                 <ul className="grid grid-cols-12 gap-6 col-span-8 not-prose" aria-labelledby="migrate-to-supabase">
-                  {[
+                  {([
                     ["Amazon RDS", "/docs/guides/platform/migrating-to-supabase/amazon-rds", "/SVG/aws-rds-icon.svg"],
                     ["Auth0", "/docs/guides/platform/migrating-to-supabase/auth0", "/SVG/auth0-icon.svg", true],
                     ["Firebase Auth", "/docs/guides/platform/migrating-to-supabase/firebase-auth", "/SVG/firebase-icon.svg"],
@@ -351,7 +351,7 @@ export default function DocsPage() {
                     ["Postgres", "/docs/guides/platform/migrating-to-supabase/postgres", "/SVG/postgres-icon.svg"],
                     ["Render", "/docs/guides/platform/migrating-to-supabase/render", "/SVG/render-icon.svg"],
                     ["Vercel Postgres", "/docs/guides/platform/migrating-to-supabase/vercel-postgres", "/SVG/vercel-icon.svg", true],
-                  ].map(([name, href, iconSrc, hasDark]) => (
+                  ] as const).map(([name, href, iconSrc, hasDark]) => (
                     <li key={name} className="col-span-6 md:col-span-4">
                       <Link className="group relative -m-3 flex items-center gap-3 rounded-xl p-3 no-underline transition-colors hover:bg-accent focus-ring focus-visible:bg-accent" href={href}>
                         <div className="flex shrink-0 items-center justify-center overflow-hidden rounded-lg border bg-surface-100 transition-colors group-hover:border-strong group-focus-visible:border-strong h-10 w-10">
@@ -607,7 +607,7 @@ export default function DocsPage() {
                   <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
                   <path d="m9 11 3 3L22 4"></path>
                 </svg>
-                <p>Something's not right?</p>
+                <p>Something&apos;s not right?</p>
                 <a className="text-primary hover:underline" target="_blank" rel="noreferrer noopener" href="https://status.supabase.com/">Check system status</a>
               </li>
             </ul>
@@ -621,7 +621,7 @@ export default function DocsPage() {
               <a className="text-xs text-foreground-lighter hover:underline" href="https://github.com/supabase/supabase/blob/master/apps/docs/CONTRIBUTING.md">Author Styleguide</a>
               <a className="text-xs text-foreground-lighter hover:underline" href="https://supabase.com/open-source">Open Source</a>
               <a className="text-xs text-foreground-lighter hover:underline" href="https://supabase.com/supasquad">SupaSquad</a>
-              <button className="text-xs text-foreground-lighter hover:underline" type="button" aria-haspopup="dialog" aria-expanded="false" data-state="closed" tabindex="0">Privacy Settings</button>
+              <button className="text-xs text-foreground-lighter hover:underline" type="button" aria-haspopup="dialog" aria-expanded="false" data-state="closed" tabIndex={0}>Privacy Settings</button>
             </div>
             <div className="flex items-center gap-4">
               <a href="https://twitter.com/supabase" className="text-foreground-muted hover:text-foreground transition">

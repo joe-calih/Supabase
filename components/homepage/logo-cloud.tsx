@@ -15,7 +15,7 @@ export function LogoCloud() {
             transition={{ duration: 0.6 }}
             className="mb-2 text-lg text-muted-foreground"
           >
-            Powering the world's best product teams.
+            Powering the world&apos;s best product teams.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
