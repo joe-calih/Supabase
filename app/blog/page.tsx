@@ -1,3 +1,5 @@
+import { getPageMetadata } from "@/lib/seo"
+export const metadata = getPageMetadata("/blog")
 import Link from "next/link"
 import { ArrowUpRight, Calendar } from "lucide-react"
 import { Navbar } from "@/components/homepage/navbar"

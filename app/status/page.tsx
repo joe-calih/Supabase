@@ -1,3 +1,5 @@
+import { getPageMetadata } from "@/lib/seo"
+export const metadata = getPageMetadata("/status")
 import { Activity, CheckCircle2, Clock3 } from "lucide-react"
 import { Navbar } from "@/components/homepage/navbar"
 import { Footer } from "@/components/homepage/footer"

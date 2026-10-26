@@ -1,3 +1,5 @@
+import { getPageMetadata } from "@/lib/seo"
+export const metadata = getPageMetadata("/switch")
 import { ArrowRight, Database, GitBranch, ShieldCheck } from "lucide-react"
 import Link from "next/link"
 import { Navbar } from "@/components/homepage/navbar"

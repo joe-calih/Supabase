@@ -1,2 +1,4 @@
+import { getPageMetadata } from "@/lib/seo"
+export const metadata = getPageMetadata("/privacy")
 import { FooterContentPage } from "@/components/footer-content-page"
 export default function PrivacyPage() { return <FooterContentPage eyebrow="Privacy" title="Privacy should be understandable" description="This page explains the principles we use when collecting, using, and protecting information." sections={[["What we collect", "We collect information needed to provide, secure, and improve our services.", "We aim to collect what is relevant and avoid retaining information longer than necessary."], ["How we use it", "Information helps us operate accounts, respond to support requests, and understand product health.", "We do not sell personal information."], ["Your choices", "You can manage account information, communication preferences, and certain data requests.", "Contact us if you need help understanding or exercising your options."]]}/>}

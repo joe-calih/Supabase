@@ -94,6 +94,28 @@ export const viewport: Viewport = {
   ],
 }
 
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      name: 'Sprint',
+      url: 'https://sprint.example.com',
+      description: 'A purpose-built system for planning and building modern software products.',
+    },
+    {
+      '@type': 'WebSite',
+      name: 'Sprint',
+      url: 'https://sprint.example.com',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: 'https://sprint.example.com/docs?search={search_term_string}',
+        'query-input': 'required name=search_term_string',
+      },
+    },
+  ],
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -103,6 +125,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${geist.variable} ${geistMono.variable} font-sans antialiased`} suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
           {children}
         </ThemeProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}

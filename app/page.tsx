@@ -1,3 +1,5 @@
+import { getPageMetadata } from "@/lib/seo"
+export const metadata = getPageMetadata("/")
 import { Hero3DStage } from "@/components/homepage/hero-3d-stage"
 
 const structuredData = {

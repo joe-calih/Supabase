@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ProductNav } from "@/components/product-nav"
 import { Navbar } from "@/components/homepage/navbar"
+import { Footer } from "@/components/homepage/footer"
 
 type Product = "database" | "auth" | "storage" | "realtime"
 
@@ -73,7 +74,7 @@ export function ProductPage({ product }: { product: Product }) {
       <section id="features" className="border-y border-border bg-card/40"><div className="mx-auto max-w-6xl px-6 py-24"><p className="font-mono text-xs uppercase tracking-widest text-primary">{page.accent}</p><h2 className="mt-4 text-4xl tracking-tight">Everything you need to ship</h2><div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">{page.features.map(([title, description, FeatureIcon]) => <div key={title}><FeatureIcon className="size-6 text-primary" /><h3 className="mt-5 font-medium">{title}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{description}</p></div>)}</div></div></section>
       <section className="mx-auto max-w-6xl px-6 py-24"><div className="grid gap-5 md:grid-cols-3">{page.cards.map(([title, description]) => <Card key={title}><CardHeader><CardTitle>{title}</CardTitle></CardHeader><CardContent className="text-sm leading-6 text-muted-foreground">{description}</CardContent></Card>)}</div></section>
       <section className="border-t border-border"><div className="mx-auto max-w-6xl px-6 py-24"><div className="rounded-2xl bg-primary p-8 text-primary-foreground sm:p-14"><h2 className="max-w-2xl text-4xl tracking-tight">Build with {page.label} today</h2><p className="mt-5 max-w-xl">Start with a free Supabase project and ship your next idea faster.</p><Button className="mt-8 bg-background text-foreground hover:bg-background/90" asChild><Link href="/signup">Start your project <ArrowRight className="size-4" /></Link></Button></div></div></section>
-      <footer className="border-t border-border py-10 text-center text-sm text-muted-foreground">Built with Supabase {page.label}.</footer>
+      <Footer />
     </main>
   )
 }

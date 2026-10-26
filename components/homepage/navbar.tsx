@@ -21,7 +21,7 @@ function SprintMark() {
 
 export function Navbar({ fixed = true, align = "balanced" }: { fixed?: boolean; align?: "balanced" | "left" }) {
   return (
-    <nav className={`${fixed ? "fixed" : "relative"} left-0 right-0 top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md`}>
+    <nav className={`${fixed ? "fixed" : "relative"} left-0 right-0 top-0 z-50 border-b border-border bg-background/60 backdrop-blur-md`}>
       <div className="w-full flex justify-center px-6 py-4">
         <div className={`w-full max-w-6xl flex items-center relative ${align === "left" ? "justify-start" : "justify-between"}`}>
           

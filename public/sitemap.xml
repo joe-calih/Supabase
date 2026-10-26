@@ -10,4 +10,8 @@
   <url><loc>https://sprint.example.com/realtime</loc></url>
   <url><loc>https://sprint.example.com/pricing</loc></url>
   <url><loc>https://sprint.example.com/about</loc></url>
+  <url><loc>https://sprint.example.com/agents</loc></url>
+  <url><loc>https://sprint.example.com/learn</loc></url>
+  <url><loc>https://sprint.example.com/tools</loc></url>
+  <url><loc>https://sprint.example.com/contact</loc></url>
 </urlset>

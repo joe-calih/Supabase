@@ -1,3 +1,5 @@
+import { getPageMetadata } from "@/lib/seo"
+export const metadata = getPageMetadata("/customers")
 import Link from "next/link"
 import { ArrowUpRight, BarChart3, Bot, Globe2, Layers3 } from "lucide-react"
 import { Navbar } from "@/components/homepage/navbar"

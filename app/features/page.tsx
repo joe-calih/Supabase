@@ -1,3 +1,5 @@
+import { getPageMetadata } from "@/lib/seo"
+export const metadata = getPageMetadata("/features")
 import { Database, LockKeyhole, Radio, Server, Upload, Users } from "lucide-react"
 import { Navbar } from "@/components/homepage/navbar"
 import { Footer } from "@/components/homepage/footer"

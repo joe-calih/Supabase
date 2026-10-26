@@ -1,3 +1,5 @@
+import { getPageMetadata } from "@/lib/seo"
+export const metadata = getPageMetadata("/support")
 import Link from "next/link"
 import { BookOpen, LifeBuoy, MessageCircle, Search } from "lucide-react"
 import { Navbar } from "@/components/homepage/navbar"

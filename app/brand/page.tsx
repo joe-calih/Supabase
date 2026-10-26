@@ -1,2 +1,4 @@
+import { getPageMetadata } from "@/lib/seo"
+export const metadata = getPageMetadata("/brand")
 import { FooterContentPage } from "@/components/footer-content-page"
 export default function BrandPage() { return <FooterContentPage eyebrow="Brand" title="The Supabase brand" description="Resources for representing Supabase consistently across products, presentations, and communities." sections={[["Logo", "Use the Supabase mark with enough clear space to remain recognizable.", "Do not stretch, rotate, recolor, or place the logo on backgrounds that reduce contrast."], ["Voice", "Our voice is clear, direct, technical, and welcoming.", "We prefer useful explanations over hype and specific examples over vague promises."], ["Community", "Supabase belongs to the developers who build with it.", "Use the brand to invite people into the community and help them understand what they can make."]]}/>}

@@ -1,3 +1,5 @@
+import { getPageMetadata } from "@/lib/seo"
+export const metadata = getPageMetadata("/docs")
 import Link from "next/link"
 import { Search } from "lucide-react"
 import { DocsHeader } from "@/components/docs/docs-header"

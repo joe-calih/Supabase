@@ -1,3 +1,5 @@
+import { getPageMetadata } from "@/lib/seo"
+export const metadata = getPageMetadata("/customers/phoenix-energy")
 import { Activity, Leaf, Zap } from "lucide-react"
 import { Navbar } from "@/components/homepage/navbar"
 import { Footer } from "@/components/homepage/footer"

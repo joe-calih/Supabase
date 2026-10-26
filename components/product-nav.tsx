@@ -24,7 +24,7 @@ const products = [
 export function ProductNav({ activeHref, align = "center" }: { activeHref?: string; align?: "center" | "left" }) {
   return (
     <nav className="relative z-30 w-full border-b border-border bg-background/95 backdrop-blur">
-      <div className={`mx-auto flex max-w-6xl items-center gap-1 overflow-x-auto px-6 ${align === "left" ? "justify-start" : "justify-center"}`}>
+      <div className={`mx-auto flex max-w-6xl items-center gap-1 overflow-x-auto px-5 ${align === "left" ? "justify-start" : "justify-center"}`}>
         {products.map(({ label, href, icon: Icon }) => (
           <Link
             key={label}

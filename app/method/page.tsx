@@ -1,3 +1,5 @@
+import { getPageMetadata } from "@/lib/seo"
+export const metadata = getPageMetadata("/method")
 import { ArrowRight, Compass, FlaskConical, Repeat2 } from "lucide-react"
 import Link from "next/link"
 import { Navbar } from "@/components/homepage/navbar"

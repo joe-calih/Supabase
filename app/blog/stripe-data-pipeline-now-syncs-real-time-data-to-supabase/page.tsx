@@ -1,3 +1,5 @@
+import { getPageMetadata } from "@/lib/seo"
+export const metadata = getPageMetadata("/blog/stripe-data-pipeline-now-syncs-real-time-data-to-supabase")
 import { ArrowDownToLine, Database, RefreshCw } from "lucide-react"
 import { Navbar } from "@/components/homepage/navbar"
 import { Footer } from "@/components/homepage/footer"

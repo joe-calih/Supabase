@@ -99,7 +99,7 @@
 }
 
 .light nav {
-  background-color: color-mix(in oklch, var(--background) 88%, transparent) !important;
+  background-color: color-mix(in oklch, var(--background) 60%, transparent) !important;
   border-color: var(--border) !important;
 }
 

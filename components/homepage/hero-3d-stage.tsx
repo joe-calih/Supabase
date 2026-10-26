@@ -27,6 +27,7 @@ import { FeaturesSection } from "./features-section"
 import { ProjectSection } from "./project-section"
 import { KeywordResearchCta } from "./keyword-research-cta"
 import { CustomerStoriesSection } from "./customer-stories-section"
+import { StudioMetrics } from "./studio-metrics"
 
 export function Hero3DStage() {
   const [yOffset, setYOffset] = useState(0)
@@ -55,6 +56,7 @@ export function Hero3DStage() {
       <section className="relative min-h-screen overflow-hidden bg-background">
         <Navbar />
         <HeaderHeroSection />
+        <StudioMetrics />
 
         {/* Subtle glow */}
         <div

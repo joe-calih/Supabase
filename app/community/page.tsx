@@ -1,2 +1,4 @@
+import { getPageMetadata } from "@/lib/seo"
+export const metadata = getPageMetadata("/community")
 import { FooterContentPage } from "@/components/footer-content-page"
 export default function CommunityPage() { return <FooterContentPage eyebrow="Community" title="Build alongside people who care" description="Ask questions, share projects, and learn from developers using Supabase around the world." sections={[["Ask and answer", "The community is a place for practical questions and thoughtful answers.", "Include enough context for others to reproduce your problem and share what you have already tried."], ["Share your work", "Projects help the community learn what is possible.", "Show the decisions, tradeoffs, and lessons behind your implementation—not just the final screenshot."], ["Make it better", "Contributions take many forms.", "Improve docs, create examples, report issues, and help new builders feel welcome."]]}/>}

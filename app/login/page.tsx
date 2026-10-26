@@ -1,3 +1,5 @@
+import { getPageMetadata } from "@/lib/seo"
+export const metadata = getPageMetadata("/login")
 import { AuthForm } from "@/components/auth/auth-form"
 import { AuthBrand } from "@/components/auth/auth-brand"
 import { Navbar } from "@/components/homepage/navbar"

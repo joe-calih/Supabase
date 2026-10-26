@@ -1,3 +1,5 @@
+import { getPageMetadata } from "@/lib/seo"
+export const metadata = getPageMetadata("/pricing")
 import Link from "next/link"
 import { Check, ArrowRight } from "lucide-react"
 import { Navbar } from "@/components/homepage/navbar"
