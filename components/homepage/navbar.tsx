@@ -19,18 +19,18 @@ function SprintMark() {
   )
 }
 
-export function Navbar({ fixed = true }: { fixed?: boolean }) {
+export function Navbar({ fixed = true, align = "balanced" }: { fixed?: boolean; align?: "balanced" | "left" }) {
   return (
     <nav className={`${fixed ? "fixed" : "relative"} left-0 right-0 top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md`}>
       <div className="w-full flex justify-center px-6 py-4">
-        <div className="w-full max-w-6xl flex items-center justify-between relative">
+        <div className={`w-full max-w-6xl flex items-center relative ${align === "left" ? "justify-start" : "justify-between"}`}>
           
           <Link href="/" className="flex items-center gap-2" aria-label="Sprint home">
             <SprintMark />
             <span className="font-semibold text-foreground">Sprint</span>
           </Link>
 
-          <NavigationMenu.Root className="relative hidden items-center bg-transparent md:flex">
+          <NavigationMenu.Root className={`relative hidden items-center bg-transparent md:flex ${align === "left" ? "ml-10" : ""}`}>
             <NavigationMenu.List className="m-0 flex list-none items-center gap-8 bg-transparent p-0">
               
               {/* Product Dropdown Menu */}
@@ -488,7 +488,7 @@ export function Navbar({ fixed = true }: { fixed?: boolean }) {
             <NavigationMenu.Viewport className="absolute top-full left-1/2 -translate-x-1/2 mt-2" />
           </NavigationMenu.Root>
 
-          <div className="flex items-center gap-4">
+          <div className={`flex items-center gap-4 ${align === "left" ? "ml-auto" : ""}`}>
             <Link href="/login" className="text-sm text-zinc-400 hover:text-white transition-colors">
               Log in
             </Link>

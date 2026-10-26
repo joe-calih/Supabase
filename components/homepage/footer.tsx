@@ -33,6 +33,14 @@ export function Footer() {
     Community: ["Contact us", "Community", "Events", "Open Source", "Contributing", "Community", "Events", "Open Source", "Contributing", "Community", "Events", "Open Source"],
   }
 
+  const footerHref: Record<string, string> = {
+    Pricing: "/pricing", Method: "/method", Integrations: "/integrations", Changelog: "/changelog", Documentation: "/docs", Download: "/download", Switch: "/switch",
+    "AI Builders": "/solutions/ai-builders", "No Code": "/solutions/no-code", Beginners: "/solutions/beginners", Developers: "/solutions/developers", Startups: "/solutions/startups", Enterprise: "/solutions/enterprise", Healthcare: "/solutions/healthcare", Agents: "/solutions/agents",
+    Status: "/status", "Report vulnerability": "/security", DPA: "/dpa", Privacy: "/privacy", Terms: "/terms",
+    About: "/about", Customers: "/customers", Partners: "/partners", Careers: "/careers", README: "/readme", Quality: "/quality", Brand: "/brand",
+    "Contact us": "/contact", Community: "/community", Events: "/events", "Open Source": "/open-source", Contributing: "/contribute",
+  }
+
   // Close drawer on outside click
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -84,7 +92,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {links.map((link, index) => (
                   <li key={`${category}-${link}-${index}`}>
-                    <a href={link === "Partners" ? "/partners" : link === "Careers" ? "/careers" : link === "Open Source" ? "/open-source" : "#"} className="text-muted-foreground transition-colors hover:text-foreground text-[15px] ">
+                    <a href={footerHref[link] ?? "#"} className="text-muted-foreground transition-colors hover:text-foreground text-[15px] ">
                       {link}
                     </a>
                   </li>

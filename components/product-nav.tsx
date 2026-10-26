@@ -21,15 +21,15 @@ const products = [
   { label: "Realtime", href: "/realtime", icon: Activity },
 ]
 
-export function ProductNav() {
+export function ProductNav({ activeHref, align = "center" }: { activeHref?: string; align?: "center" | "left" }) {
   return (
     <nav className="relative z-30 w-full border-b border-border bg-background/95 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-center gap-1 overflow-x-auto px-4 sm:px-6 lg:px-8">
+      <div className={`mx-auto flex max-w-6xl items-center gap-1 overflow-x-auto px-6 ${align === "left" ? "justify-start" : "justify-center"}`}>
         {products.map(({ label, href, icon: Icon }) => (
           <Link
             key={label}
             href={href}
-            className="flex shrink-0 items-center gap-1.5 rounded-md px-2.5 py-3.5 text-xs text-muted-foreground transition-colors hover:bg-accent hover:text-foreground sm:text-sm"
+            className={`flex shrink-0 items-center gap-1.5 border-b px-2.5 py-3.5 text-xs transition-colors hover:text-foreground sm:text-sm ${activeHref === href ? "border-foreground text-foreground" : "border-transparent text-muted-foreground"}`}
           >
             <Icon className="size-4" />
             <span className="hidden md:inline">{label}</span>

@@ -9,7 +9,7 @@ export default function DocsPage() {
       
       {/* Hero Section */}
       <section className="border-b border-border bg-card/40">
-        <div className="mx-auto max-w-5xl px-6 py-20 text-center sm:py-28">
+        <div className="mx-auto max-w-6xl px-6 py-20 text-center sm:py-28">
           <p className="font-mono text-xs uppercase tracking-[0.25em] text-primary">Supabase Documentation</p>
           <h1 className="mx-auto mt-5 max-w-3xl text-5xl font-medium tracking-tight sm:text-7xl">
             Build in a weekend.<br /><span className="text-muted-foreground">Scale to millions.</span>
@@ -30,7 +30,7 @@ export default function DocsPage() {
       </section>
 
       {/* Main Content Sections */}
-      <div className="px-6 mx-auto pt-12 pb-6 max-w-7xl">
+      <div className="mx-auto max-w-6xl px-6 pt-12 pb-6">
         <div className="relative transition-all ease-out duration-150">
           <div className="prose max-w-none">
             <div className="flex flex-col">
@@ -577,7 +577,7 @@ export default function DocsPage() {
       </div>
 
       {/* Footer Section */}
-      <div className="max-w-6xl px-6 mx-auto pb-6 pt-0">
+      <div className="mx-auto max-w-6xl px-6 pb-6 pt-0">
         <footer role="contentinfo" aria-label="footer">
           <div className="mt-16">
             <ul className="flex flex-col gap-2">

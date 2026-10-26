@@ -1,0 +1,20 @@
+# Soil
+
+Soil is a responsive developer platform website inspired by Supabase workflows.
+
+## Main routes
+
+- `/` Homepage
+- `/docs` Documentation
+- `/database` Database
+- `/auth` Authentication
+- `/storage` Storage
+- `/edge-functions` Edge Functions
+- `/compute` Compute
+- `/realtime` Realtime
+- `/pricing` Pricing
+- `/about` About
+
+## Technology
+
+Next.js, React, TypeScript, Tailwind CSS, shadcn-style components, and Lucide icons.

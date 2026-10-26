@@ -25,8 +25,8 @@ const benefits: Array<[string, string, LucideIcon]> = [
 export default function EdgeFunctionsPage() {
   return (
     <main className="min-h-screen bg-background">
-      <Navbar />
-      <div className="pt-[73px]"><ProductNav /></div>
+      <Navbar align="left" />
+      <div className="pt-[73px]"><ProductNav activeHref="/edge-functions" align="left" /></div>
       <section className="mx-auto max-w-6xl px-6 pb-20 pt-20 text-center sm:pt-28">
         <p className="mb-5 font-mono text-xs uppercase tracking-[0.25em] text-primary">Edge Functions</p>
         <h1 className="mx-auto max-w-4xl text-5xl font-medium tracking-tight sm:text-7xl">
